@@ -37,7 +37,7 @@ export default class Cartcourse extends Component {
                                         data-item-id={node.id}
                                         data-item-name={node.title}
                                         data-item-price={node.price}
-                                        data-item-url=""
+                                        data-item-url="https://lcoproject1.netlify.com/"
                                         data-item-image={node.image.fluid.src}
                                         className="btn btn-warning btn-block snipcart-add-item"
                                      >
