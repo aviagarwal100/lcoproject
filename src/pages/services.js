@@ -7,22 +7,20 @@ import SEO from "../components/seo"
 import HeroSection from "../components/reusable/HeroSection"
 import Infoblock from "../components/reusable/Infoblock";
 import Dualinfoblock from "../components/reusable/Dualinfoblock";
-import Cartcourse from "../components/Cart/Cartcourse"
 
 
 
-const IndexPage = ({data}) => (
+const ServicesPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
      <HeroSection
      img={data.image.childImageSharp.fluid}
-      title="I write code"
-      subtitle="learn code online"
-      heroStyle="hero"
+      title="Services"
+      subtitle=""
+      heroStyle="about"
      />
-     <Infoblock heading="About"/>
-     <Cartcourse courses={data.courses}/>
-     <Dualinfoblock heading="Our Team"/>
+     <Infoblock heading="Services"/>
+     <Dualinfoblock heading="Information"/>
      
    
   </Layout>
@@ -38,29 +36,9 @@ export const query=graphql`
         }
       }
     }
-    courses:allContentfulCourse{
-      edges{
-        node{
-          id
-          title
-          price
-          category
-          image{
-            fluid{
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description{
-            description
-          }
-          
-        }
-      }
-    }
-    
 }
 
 `
 
 
-export default IndexPage
+export default ServicesPage
