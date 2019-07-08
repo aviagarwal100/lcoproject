@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import HeroSection from "../components/reusable/HeroSection"
 import Infoblock from "../components/reusable/Infoblock";
 import Dualinfoblock from "../components/reusable/Dualinfoblock";
+import Contact from "../components/Contact/Contact";
 
 
 
@@ -21,6 +22,7 @@ const ContactPage = ({data}) => (
      />
      <Infoblock heading="Contact Details"/>
      <Dualinfoblock heading="Our Team"/>
+     <Contact/>
      
    
   </Layout>

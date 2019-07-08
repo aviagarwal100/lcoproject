@@ -3,20 +3,69 @@ import Header from "../reusable/Header"
 import Img from "gatsby-image"
 import {Link} from "gatsby"
 
+const getCaty=item=>{
+let holdItems=item.map(item=>{
+    return item.node.category
+})
+
+let holdCategory=new Set(holdItems)
+let categories=Array.from(holdCategory)
+categories=["All",...categories]
+return categories
+
+}
+
 export default class Cartcourse extends Component {
     constructor(props){
         super(props)
         this.state={
             course:props.courses.edges,
             mycourse:props.courses.edges,
+            mycategories:getCaty(props.courses.edges)
 
+        }
+    }
+    catyclicked=category=>{
+        let keepitsafe=[...this.state.course]
+
+        if(category==="All"){
+            this.setState(()=>{
+                return {mycourse:keepitsafe}
+            })
+
+        }
+        else{
+            let hold=keepitsafe.filter(({node})=>node.category===category)
+            this.setState(()=>{
+
+                return{mycourse:hold}
+            })
         }
     }
     render() {
         return (
             <section className="py-5 bg-theme">
-              <div className="container">
+              <div className="container text-center">
                <Header title="Courses"/>
+               <div className="row text-center">
+               {
+                   this.state.mycategories.map((category,index)=>{
+                       return(
+                                <button key={index} type="button" className="btn btn-success text-center py-2 my-3 mx-3 " onClick={()=>{
+                                    this.catyclicked(category)
+                                }} >
+                                {category}
+                                
+                                </button>
+
+                       )
+                 
+
+                   })
+                               
+               }
+               
+               </div>
                 <div className="row">
                     {
                         this.state.mycourse.map(({node})=>{

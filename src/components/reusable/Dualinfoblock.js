@@ -14,7 +14,7 @@ export default function Dualinfoblock({heading}) {
                               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, amet delectus inventore unde sunt temporibus minima eveniet sapiente molestias accusamus, tenetur neque deserunt? Cumque incidunt debitis et numquam quidem dolore temporibus non maiores suscipit culpa excepturi illum eaque magni nostrum repellat dolores quam iste sapiente tenetur optio, dolor odio iure itaque rerum! Officia assumenda voluptatum saepe sapiente necessitatibus ullam, minus magni sint inventore iste doloribus molestias. Fugit, debitis optio. Mollitia culpa totam eveniet autem sit optio officiis minima ut, sed labore a non commodi beatae odit itaque voluptatum iure repudiandae inventore distinctio accusamus dolorum eius? Inventore eum soluta consectetur corporis?</p>
                         </div>
                         <div className="col-4">
-                                <div className="card">
+                                <div className="card mb-4">
                                     <img src="https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="card-img-top" alt="imag goes here"/>
                                     <div className="card-body bg-dark">
                                         <h5 className="card-title text-success">Lorem ipsum dolor sit amet.</h5>
