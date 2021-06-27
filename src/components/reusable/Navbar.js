@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby';
-import logo from "../../images/logo.png" 
+import logo from "../../images/logo.jpg" 
 
 export default class Navbar extends Component {
   state={
@@ -14,15 +14,14 @@ export default class Navbar extends Component {
 
       },{
         id:2,
-        text:"About",
-        url:"/about"
+        text:"Products",
+        url:"/products"
 
 
       },{
         id:3,
-        text:"Services",
-        url:"/services"
-
+         text:"About",
+          url:"/about"
       },{
         id:4,
         text:"Contact",
@@ -48,10 +47,10 @@ export default class Navbar extends Component {
   }
     render() {
         return (
-            <nav className="navbar navbar-expand-sm bg-theme text-white">
+            <nav className="navbar navbar-expand-sm bg-dark text-white">
              
             <Link to="/" className="navbar-brand ml-5">
-              <img src={logo} alt="logo goes here" width="30px"/> 
+              <img src={logo} alt="logo goes here" width="40px"/> 
             </Link>
             <button className="navbar-toggler" onClick={this.myToddler} type="button">
               <span className="text-white">menu</span>
