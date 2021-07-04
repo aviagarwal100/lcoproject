@@ -12,7 +12,7 @@ import Dualinfoblock from "../components/reusable/Dualinfoblock";
 
 const IndexPage = ({data}) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="krishna boxes and packaging" />
      <HeroSection
      
       title="I write code"
